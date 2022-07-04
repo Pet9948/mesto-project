@@ -1,7 +1,7 @@
 .popup {
   height: 100%;
   align-items: center;
-  display: flex;
+  display: none;
   justify-content: center;
   position: fixed;
   width: 100%;
