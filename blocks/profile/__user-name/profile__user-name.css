@@ -1,9 +1,12 @@
 .profile__user-name {
+  overflow: hidden;
+  white-space: nowrap;
   color: #FFFFFF;
   font-size: 42px;
   font-weight: 500;
   line-height: 48px;
   margin: 0;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 767px) {
