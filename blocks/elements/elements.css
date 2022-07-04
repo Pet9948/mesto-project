@@ -1,0 +1,27 @@
+.elements {
+  width: 880px;
+  margin: 0 auto;
+  padding-top: 45px;
+}
+
+@media (max-width: 1279px) {
+  .elements {
+    padding-top: 40px;
+    width: calc(100vw - 100px);
+  }
+}
+
+@media (max-width: 1023px) {
+  .elements {
+    padding-top: 38px;
+    width: calc(100vw - 54px);
+  }
+}
+
+@media (max-width: 767px) {
+  .elements {
+    flex-direction: column;
+    padding-top: 36px;
+    width: calc(100vw - 38px);
+  }
+}

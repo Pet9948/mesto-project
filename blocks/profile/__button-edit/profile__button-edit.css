@@ -1,0 +1,12 @@
+.profile__button-edit {
+  align-self: end;
+  justify-self: start;
+  width: 24px;
+  height: 24px;
+}
+
+.profile__button-edit:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: .5s;
+}

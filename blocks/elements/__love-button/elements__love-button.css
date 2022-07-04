@@ -1,0 +1,22 @@
+.elements__love-button {
+  background-color: transparent;
+  background-image: url('../../../images/Love.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 0;
+  height: 22px;
+  padding: 0;
+  width: 22px;
+  cursor: pointer;
+}
+
+.elements__love-button:hover {
+  opacity: 0.5;
+  transition: .5s;
+}
+
+.elements__love-button:active {
+  background-image: url('../../../images/Love_active.svg');
+  transition: .5s;
+}

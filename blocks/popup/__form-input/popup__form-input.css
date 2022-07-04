@@ -1,0 +1,12 @@
+.popup__form-input {
+  border: 0;
+  border-bottom: 1px solid rgb(0 0 0 / 20%);
+  margin: 0;
+  padding: 13px 0;
+  width: 100%;
+}
+
+.popup__form-input:focus {
+  outline-color: #fff6c5;
+  outline-style: none;
+}

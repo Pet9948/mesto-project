@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./pages/index.css" />
+  <title>Mesto</title>
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <img class="header__logo" src="./images/header-logo.svg" alt="Логотип сайта">
+      <div class="header__line"></div>
+    </header>
+    <!-- profile -->
+    <section class="profile">
+      <img class="profile__image" src="./images/image.jpg" alt="Фото профиля">
+      <div class="profile__info">
+        <h2 class="profile__user-name">Жак-Ив Кусто</h2>
+        <img class="profile__button-edit" src="./images/button-edit.svg" alt="Кнопка редактирования">
+        <h3 class="profile__user-description">Исследователь океана</h3>
+      </div>
+      <div class="profile__button-add"></div>
+    </section>
+    <!-- elements -->
+    <section class="elements">
+      <div class="elements__cards">
+        <div class="elements__card">
+          <img class="elements__image" src="./images/kirill-pershin-1088404-unsplash.jpg" title="Карачаевск"
+            alt="Карачаевск">
+          <div class="elements__info">
+            <h2 class="elements__title">Карачаевск</h2>
+            <button type="button" class="elements__love-button"></button>
+          </div>
+        </div>
+        <div class="elements__card">
+          <img class="elements__image" src="./images/kirill-pershin-1404681-unsplash.jpg" title="Гора Эльбрус"
+            alt="Гора Эльбрус">
+          <div class="elements__info">
+            <h2 class="elements__title">Гора Эльбрус</h2>
+            <button type="button" class="elements__love-button"></button>
+          </div>
+        </div>
+        <div class="elements__card">
+          <img class="elements__image" src="./images/kirill-pershin-1556355-unsplash.jpg" title="Домбай" alt="Домбай">
+          <div class="elements__info">
+            <h2 class="elements__title">Домбай</h2>
+            <button type="button" class="elements__love-button"></button>
+          </div>
+        </div>
+        <div class="elements__card">
+          <img class="elements__image" src="./images/kirill-pershin-1404681-unsplash.jpg" title="Гора Эльбрус"
+            alt="Гора Эльбрус">
+          <div class="elements__info">
+            <h2 class="elements__title">Гора Эльбрус</h2>
+            <button type="button" class="elements__love-button"></button>
+          </div>
+        </div>
+        <div class="elements__card">
+          <img class="elements__image" src="./images/kirill-pershin-1556355-unsplash.jpg" title="Домбай" alt="Домбай">
+          <div class="elements__info">
+            <h2 class="elements__title">Домбай</h2>
+            <button type="button" class="elements__love-button"></button>
+          </div>
+        </div>
+        <div class="elements__card">
+          <img class="elements__image" src="./images/kirill-pershin-1088404-unsplash.jpg" title="Карачаево-Черкесия"
+            alt="Карачаево-Черкесия">
+          <div class="elements__info">
+            <h2 class="elements__title">Карачаево-Черкесия</h2>
+            <button type="button" class="elements__love-button"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer">
+      <p class="footer__Copyright">© 2020 Mesto Russia</p>
+    </footer>
+    <!-- edit__Profile -->
+    <div class="popup popup_opened">
+      <form class="popup__container">
+        <fieldset class="popup__form">
+          <p class="popup__form-title">Редактировать профиль</p>
+          <label class="popup__form-input-box">
+            <input name="name" placeholder="Ваше имя" class="popup__form-input" type="text" />
+          </label>
+          <label class="popup__form-input-box">
+            <input name="info" placeholder="Чем вы занимаетесь?" class="popup__form-input" type="text" />
+          </label>
+          <button type="submit" class="popup__button">Сохранить</button>
+        </fieldset>
+        <button type="button" class="popup__button-close"></button>
+      </form>
+      <div class="popup__background"></div>
+    </div>
+
+  </div>
+</body>
+
+</html>

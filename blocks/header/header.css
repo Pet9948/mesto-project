@@ -1,0 +1,26 @@
+.header {
+  width: 880px;
+  margin: 0 auto;
+  padding-top: 45px;
+}
+
+@media (max-width: 1279px) {
+  .header {
+    padding-top: 40px;
+    width: calc(100vw - 100px);
+  }
+}
+
+@media (max-width: 1023px) {
+  .header {
+    padding-top: 35px;
+    width: calc(100vw - 54px);
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    width: calc(100vw - 38px);
+    padding-top: 28px;
+  }
+}
