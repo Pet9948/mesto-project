@@ -9,6 +9,7 @@
 @media (max-width: 767px) {
   .profile__info {
     padding-top: 26px;
+    padding-left: 42px;
     gap: 14px 18px;
 
   }

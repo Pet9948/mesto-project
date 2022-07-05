@@ -5,87 +5,87 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./pages/index.css" />
-  <title>Mesto</title>
+  <title>Место</title>
 </head>
 
 <body>
   <div class="page">
     <header class="header">
       <img class="header__logo" src="./images/header-logo.svg" alt="Логотип сайта">
-      <div class="header__line"></div>
     </header>
     <!-- profile -->
-    <section class="profile">
-      <img class="profile__image" src="./images/image.jpg" alt="Фото профиля">
-      <div class="profile__info">
-        <h1 class="profile__user-name">Жак-Ив Кусто</h1>
-        <button type="button" title="Редактировать профиль" class="profile__button-edit"></button>
-        <p class="profile__user-description">Исследователь океана</p>
-      </div>
-      <button type="button" title="Добавить место" class="profile__button-add"></button>
-    </section>
-    <!-- elements -->
-    <section class="elements">
-      <div class="elements__cards">
-        <div class="elements__card">
-          <img class="elements__image" src="./images/kirill-pershin-1088404-unsplash.jpg" title="Карачаевск"
-            alt="Карачаевск">
-          <div class="elements__info">
-            <h2 class="elements__title">Карачаевск</h2>
-            <button type="button" title="Нравится" class="elements__love-button"></button>
-          </div>
+    <main class="content">
+      <section class="profile">
+        <img class="profile__image" src="./images/image.jpg" alt="Фото профиля">
+        <div class="profile__info">
+          <h1 class="profile__user-name">Жак-Ив Кусто</h1>
+          <button type="button" title="Редактировать профиль" class="profile__button-edit"></button>
+          <p class="profile__user-description">Исследователь океана</p>
         </div>
-        <div class="elements__card">
-          <img class="elements__image" src="./images/kirill-pershin-1404681-unsplash.jpg" title="Гора Эльбрус"
-            alt="Гора Эльбрус">
-          <div class="elements__info">
-            <h2 class="elements__title">Гора Эльбрус</h2>
-            <button type="button" title="Нравится" class="elements__love-button"></button>
-          </div>
-        </div>
-        <div class="elements__card">
-          <img class="elements__image" src="./images/kirill-pershin-1556355-unsplash.jpg" title="Домбай" alt="Домбай">
-          <div class="elements__info">
-            <h2 class="elements__title">Домбай</h2>
-            <button type="button" title="Нравится" class="elements__love-button"></button>
-          </div>
-        </div>
-        <div class="elements__card">
-          <img class="elements__image" src="./images/kirill-pershin-1404681-unsplash.jpg" title="Гора Эльбрус"
-            alt="Гора Эльбрус">
-          <div class="elements__info">
-            <h2 class="elements__title">Гора Эльбрус</h2>
-            <button type="button" title="Нравится" class="elements__love-button"></button>
-          </div>
-        </div>
-        <div class="elements__card">
-          <img class="elements__image" src="./images/kirill-pershin-1556355-unsplash.jpg" title="Домбай" alt="Домбай">
-          <div class="elements__info">
-            <h2 class="elements__title">Домбай</h2>
-            <button type="button" title="Нравится" class="elements__love-button"></button>
-          </div>
-        </div>
-        <div class="elements__card">
-          <img class="elements__image" src="./images/kirill-pershin-1088404-unsplash.jpg" title="Карачаево-Черкесия"
-            alt="Карачаево-Черкесия">
-          <div class="elements__info">
-            <h2 class="elements__title">Карачаево-Черкесия</h2>
-            <button type="button" title="Нравится" class="elements__love-button"></button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- footer -->
-
-    <footer class="footer">
-      <p class="footer__Copyright">© 2020 Mesto Russia</p>
-    </footer>
-
-    <!-- edit__Profile -->
-    <div class="popup ">
-      <form class="popup__container">
+        <button type="button" title="Добавить место" class="profile__button-add"></button>
+      </section>
+      <!-- elements -->
+      <section class="elements">
+        <ul class="elements__cards">
+          <li class="elements__card">
+            <img class="elements__image" src="./images/kirill-pershin-1088404-unsplash.jpg" title="Карачаевск"
+              alt="Карачаевск">
+            <div class="elements__info">
+              <h2 class="elements__title">Карачаевск</h2>
+              <button type="button" title="Нравится" class="elements__love-button"></button>
+            </div>
+          </li>
+          <li class="elements__card">
+            <img class="elements__image" src="./images/kirill-pershin-1404681-unsplash.jpg" title="Гора Эльбрус"
+              alt="Гора Эльбрус">
+            <div class="elements__info">
+              <h2 class="elements__title">Гора Эльбрус</h2>
+              <button type="button" title="Нравится" class="elements__love-button"></button>
+            </div>
+          </li>
+          <li class="elements__card">
+            <img class="elements__image" src="./images/kirill-pershin-1556355-unsplash.jpg" title="Домбай" alt="Домбай">
+            <div class="elements__info">
+              <h2 class="elements__title">Домбай</h2>
+              <button type="button" title="Нравится" class="elements__love-button"></button>
+            </div>
+          </li>
+          <li class="elements__card">
+            <img class="elements__image" src="./images/kirill-pershin-1404681-unsplash.jpg" title="Гора Эльбрус"
+              alt="Гора Эльбрус">
+            <div class="elements__info">
+              <h2 class="elements__title">Гора Эльбрус</h2>
+              <button type="button" title="Нравится" class="elements__love-button"></button>
+            </div>
+          </li>
+          <li class="elements__card">
+            <img class="elements__image" src="./images/kirill-pershin-1556355-unsplash.jpg" title="Домбай" alt="Домбай">
+            <div class="elements__info">
+              <h2 class="elements__title">Домбай</h2>
+              <button type="button" title="Нравится" class="elements__love-button"></button>
+            </div>
+          </li>
+          <li class="elements__card">
+            <img class="elements__image" src="./images/kirill-pershin-1088404-unsplash.jpg" title="Карачаево-Черкесия"
+              alt="Карачаево-Черкесия">
+            <div class="elements__info">
+              <h2 class="elements__title">Карачаево-Черкесия</h2>
+              <button type="button" title="Нравится" class="elements__love-button"></button>
+            </div>
+          </li>
+  </div>
+  </section>
+  </main>
+  <!-- footer -->
+  <footer class="footer">
+    <p class="footer__copyright">© 2020 Mesto Russia</p>
+  </footer>
+  <!-- edit__Profile -->
+  <div class="popup">
+    <div class="popup__container">
+      <h2 class="popup__form-title">Редактировать профиль</h2>
+      <form name="profile">
         <fieldset class="popup__form">
-          <p class="popup__form-title">Редактировать профиль</p>
           <label class="popup__form-input-box">
             <input name="name" placeholder="Ваше имя" class="popup__form-input" type="text" />
           </label>
@@ -96,8 +96,9 @@
         </fieldset>
         <button type="button" title="Закрыть" class="popup__button-close"></button>
       </form>
-      <div class="popup__background"></div>
     </div>
+    <div class="popup__background"></div>
+  </div>
   </div>
 </body>
 

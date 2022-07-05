@@ -3,13 +3,13 @@
   font-weight: 900;
   line-height: 29px;
   margin: 0;
-  padding-bottom: calc(54px - 13px);
+  padding-bottom: 54px;
 }
 
 @media (max-width: 767px) {
   .popup__form-title {
     font-size: 18px;
     line-height: 22px;
-    padding-bottom: calc(75px - 13px);
+    padding-bottom: 75px;
   }
 }

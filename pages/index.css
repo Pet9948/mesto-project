@@ -3,12 +3,12 @@
 @import url('../vendor/normalize.css');
 @import url('../vendor/fonts.css');
 @import url('../blocks/page/page.css');
+@import url('../blocks/content/content.css');
 
 /* Блок header */
 
 @import url('../blocks/header/header.css');
 @import url('../blocks/header/__logo/header__logo.css');
-@import url('../blocks/header/__line/header__line.css');
 
 /* Блок profile */
 
@@ -19,7 +19,6 @@
 @import url('../blocks/profile/__user-description/profile__user-description.css');
 @import url('../blocks/profile/__button-edit/profile__button-edit.css');
 @import url('../blocks/profile/__button-add/profile__button-add.css');
-@import url('../blocks/profile/__edit-profile/profile__edit-profile.css');
 
 /* Блок elements */
 
@@ -34,7 +33,7 @@
 /* Блок footer */
 
 @import url('../blocks/footer/footer.css');
-@import url('../blocks/footer/__Copyright/footer__Copyright.css');
+@import url('../blocks/footer/__copyright/footer__copyright.css');
 
 /* Модальное окно popup */
 

@@ -10,6 +10,12 @@
   right: calc(-32px - 8px);
   top: calc(-32px - 8px);
   width: 32px;
+  cursor: pointer;
+}
+
+.popup__button-close:hover {
+  opacity: 0.8;
+  transition: .5s;
 }
 
 @media (max-width: 767px) {
