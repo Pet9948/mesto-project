@@ -16,3 +16,10 @@
   opacity: 0.6;
   transition: .5s;
 }
+
+@media (max-width: 767px) {
+  .profile__button-edit {
+    height: 18px;
+    width: 18px;
+  }
+}

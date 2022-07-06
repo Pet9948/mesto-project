@@ -36,7 +36,8 @@
 
 @media (max-width: 767px) {
   .header {
-    width: calc(100vw - 38px);
+    width: 100%;
+    box-sizing: border-box;
     padding-top: 28px;
   }
 }
