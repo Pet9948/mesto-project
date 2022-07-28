@@ -29,6 +29,8 @@
 @import url('../blocks/elements/__info/elements__info.css');
 @import url('../blocks/elements/__title/elements__title.css');
 @import url('../blocks/elements/__love-button/elements__love-button.css');
+@import url('../blocks/elements/__love-button/_active/elements__love-button_active.css');
+@import url('../blocks/elements/__trash-can/elements__trash-can.css');
 
 /* Блок footer */
 
@@ -47,3 +49,8 @@
 @import url('../blocks/popup/__button/popup__button.css');
 @import url('../blocks/popup/__button-close/popup__button-close.css');
 
+/* popup окно с картинкой */
+
+@import url('../blocks/popup/__image/popup__image.css');
+@import url('../blocks/popup/__image-container/popup__image-container.css');
+@import url('../blocks/popup/__image-text/popup__image-text.css');

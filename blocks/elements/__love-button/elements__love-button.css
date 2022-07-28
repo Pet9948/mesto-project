@@ -15,8 +15,3 @@
   opacity: 0.5;
   transition: .5s;
 }
-
-.elements__love-button:active {
-  background-image: url('../../../images/Love_active.svg');
-  transition: .5s;
-}

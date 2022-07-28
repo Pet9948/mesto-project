@@ -26,67 +26,35 @@
       </section>
       <!-- elements -->
       <section class="elements">
-        <ul class="elements__cards">
-          <li class="elements__card">
-            <img class="elements__image" src="./images/kirill-pershin-1088404-unsplash.jpg" title="Карачаевск" alt="Карачаевск">
-            <div class="elements__info">
-              <h2 class="elements__title">Карачаевск</h2>
-              <button type="button" title="Нравится" class="elements__love-button"></button>
-            </div>
-          </li>
-          <li class="elements__card">
-            <img class="elements__image" src="./images/kirill-pershin-1404681-unsplash.jpg" title="Гора Эльбрус" alt="Гора Эльбрус">
-            <div class="elements__info">
-              <h2 class="elements__title">Гора Эльбрус</h2>
-              <button type="button" title="Нравится" class="elements__love-button"></button>
-            </div>
-          </li>
-          <li class="elements__card">
-            <img class="elements__image" src="./images/kirill-pershin-1556355-unsplash.jpg" title="Домбай" alt="Домбай">
-            <div class="elements__info">
-              <h2 class="elements__title">Домбай</h2>
-              <button type="button" title="Нравится" class="elements__love-button"></button>
-            </div>
-          </li>
-          <li class="elements__card">
-            <img class="elements__image" src="./images/kirill-pershin-1404681-unsplash.jpg" title="Гора Эльбрус" alt="Гора Эльбрус">
-            <div class="elements__info">
-              <h2 class="elements__title">Гора Эльбрус</h2>
-              <button type="button" title="Нравится" class="elements__love-button"></button>
-            </div>
-          </li>
-          <li class="elements__card">
-            <img class="elements__image" src="./images/kirill-pershin-1556355-unsplash.jpg" title="Домбай" alt="Домбай">
-            <div class="elements__info">
-              <h2 class="elements__title">Домбай</h2>
-              <button type="button" title="Нравится" class="elements__love-button"></button>
-            </div>
-          </li>
-          <li class="elements__card">
-            <img class="elements__image" src="./images/kirill-pershin-1088404-unsplash.jpg" title="Карачаево-Черкесия" alt="Карачаево-Черкесия">
-            <div class="elements__info">
-              <h2 class="elements__title">Карачаево-Черкесия</h2>
-              <button type="button" title="Нравится" class="elements__love-button"></button>
-            </div>
-          </li>
-        </ul>
+        <ul class="elements__cards"></ul>
       </section>
+      <template id="card">
+        <li class="elements__card">
+          <button type="button" title="Удалить" class="elements__trash-can"></button>
+          <img class="elements__image" src="./images/noimage.jpg" title="Фото" alt="Фото">
+          <div class="elements__info">
+            <h2 class="elements__title">Тут будет название</h2>
+            <button type="button" title="Нравится" class="elements__love-button"></button>
+          </div>
+
+        </li>
+      </template>
     </main>
     <!-- footer -->
     <footer class="footer">
       <p class="footer__copyright">© 2020 Mesto Russia</p>
     </footer>
     <!-- edit__Profile -->
-    <div class="popup">
+    <div id="popupProfile" class="popup">
       <div class="popup__container">
         <h2 class="popup__form-title">Редактировать профиль</h2>
         <form name="profile">
           <fieldset class="popup__form">
             <label class="popup__form-input-box">
-              <input name="name" placeholder="Ваше имя" class="popup__form-input" type="text" />
+              <input name="profileName" placeholder="Ваше имя" class="popup__form-input" type="text" />
             </label>
             <label class="popup__form-input-box">
-              <input name="info" placeholder="Чем вы занимаетесь?" class="popup__form-input" type="text" />
+              <input name="profileInfo" placeholder="Чем вы занимаетесь?" class="popup__form-input" type="text" />
             </label>
             <button type="submit" title="Сохранить изменения" class="popup__button">Сохранить</button>
           </fieldset>
@@ -94,7 +62,35 @@
         </form>
       </div>
     </div>
+    <!-- add_card -->
+    <div id="popupAddCards" class="popup">
+      <div class="popup__container">
+        <h2 class="popup__form-title">Новое место</h2>
+        <form name="Addcards">
+          <fieldset class="popup__form">
+            <label class="popup__form-input-box">
+              <input name="cardName" placeholder="Название" class="popup__form-input" type="text" />
+            </label>
+            <label class="popup__form-input-box">
+              <input name="cardLink" placeholder="Ссылка на картинку" class="popup__form-input" type="text" />
+            </label>
+            <button type="submit" title="Создать" class="popup__button">Сохранить</button>
+          </fieldset>
+          <button type="button" title="Закрыть" class="popup__button-close"></button>
+        </form>
+      </div>
+    </div>
+    <!-- image_large -->
+    <div id="imageLarge" class="popup">
+      <div class="popup__image-container">
+        <img class="popup__image" src="./images/noimage.jpg" title="Фото" alt="Фото">
+        <button type="button" title="Закрыть" class="popup__button-close"></button>
+        <p class="popup__image-text">Тут будет название</p>
+      </div>
+    </div>
   </div>
+  <script src="./pages/index.js"></script>
+
 </body>
 
 </html>

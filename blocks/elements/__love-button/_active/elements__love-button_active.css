@@ -1,0 +1,4 @@
+.elements__love-button_active {
+  background-image: url('../../../../images/Love_active.svg');
+  transition: .5s;
+}

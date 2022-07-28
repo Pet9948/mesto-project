@@ -1,12 +1,16 @@
 .popup {
   align-items: center;
   bottom: 0;
-  display: none;
+  display: flex;
   justify-content: center;
   left: 0;
+  opacity: 0;
   position: fixed;
   right: 0;
   top: 0;
+  visibility: hidden;
+  transition: visibility 0.3s, opacity 0.5s ease;
+
 }
 
 .popup::before {

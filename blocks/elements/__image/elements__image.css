@@ -1,4 +1,6 @@
 .elements__image {
+  aspect-ratio: 1/1;
   min-height: 282px;
   width: 100%;
+  object-fit: cover;
 }
