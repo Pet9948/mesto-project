@@ -51,14 +51,14 @@ const cardLink = popupAddCards.querySelector('input[name="cardLink"]');
 
 // Развёртывание картинок.
 const popupImage = document.querySelector("#imageLarge");
-const PopupImageText = popupImage.querySelector('.popup__image-text');
-const PopupImageContainer = popupImage.querySelector('.popup__image');
+const popupImageText = popupImage.querySelector('.popup__image-text');
+const popupImageContainer = popupImage.querySelector('.popup__image');
 
 // Записываем новые значения в value.
 function openProfilePopup() {
   profileName.value = profileUserName.textContent;
   profileInfo.value = profileUserDescription.textContent;
-  togglePopup(popupProfile); //Открытие попапа
+  OpenPopup(popupProfile); //Открытие попапа
 }
 
 // Меняем в профиле информацию.
@@ -68,52 +68,65 @@ function handleProfileForm(evt) {
   const jobInput = profileInfo;
   profileUserName.textContent = nameInput.value;
   profileUserDescription.textContent = jobInput.value;
-  togglePopup(popupProfile); // закрываем попап вручную
+  ClosePopup(popupProfile); // закрываем попап вручную
 }
 
 // Встраиваем 6 карточек из масива.
-function createCardElement(name, link) {
+function createCard(name, link) {
   const cardElement = cardTemplate.querySelector(".elements__card").cloneNode(true);
   const cardImage = cardElement.querySelector(".elements__image");
   cardImage.src = link;
   cardImage.alt = name;
   cardImage.addEventListener('click', openImageLarge);
   cardElement.querySelector(".elements__title").textContent = name;
-  elementsСards.prepend(cardElement);
   cardElement.querySelector('.elements__trash-can').addEventListener('click', deleteCard);
   cardElement.querySelector('.elements__love-button').addEventListener('click', addLike);
+  return cardElement;
+}
+
+function addCard(card, container) {
+  container.prepend(card);
+}
+
+function addCards() {
+  initialCards.forEach((item) =>
+    addCard(createCard(item.name, item.link), elementsСards)
+  );
 }
 
 // Функции открытия попапов
-function togglePopup(popup) {
-  popup.classList.toggle("popup_opened");
+function OpenPopup(popup) {
+  popup.classList.add("popup_opened");
+}
+
+function ClosePopup(popup) {
+  popup.classList.remove("popup_opened");
 }
 
 function openAddCards() {
-  togglePopup(popupAddCards); //Открытие попапа
+  OpenPopup(popupAddCards); //Открытие попапа
 }
 
 function openImageLarge(evt) {
-  togglePopup(popupImage); //Открытие попапа
+  OpenPopup(popupImage); //Открытие попапа
   const cardImage = evt.target;
   const card = cardImage.closest('.elements__card');
   const cardHeading = card.querySelector('.elements__title');
-  PopupImageContainer.src = cardImage.src;
-  PopupImageContainer.alt = cardImage.alt;
-  PopupImageText.textContent = cardHeading.textContent;
+  popupImageContainer.src = cardImage.src;
+  popupImageContainer.alt = cardImage.alt;
+  popupImageText.textContent = cardHeading.textContent;
 }
 
 // Функция лайков.
 function addLike(evt) {
-  like = evt.target.classList.toggle('elements__love-button_active');
+  const like = evt.target.classList.toggle('elements__love-button_active');
 }
 
 function handleCardForm(evt) {
   evt.preventDefault();
-  createCardElement(cardName.value, cardLink.value);
-  cardName.value = '';
-  cardLink.value = '';
-  togglePopup(popupAddCards); // закрываем попап вручную
+  addCard(createCard(cardName.value, cardLink.value), elementsСards);
+  evt.target.reset();
+  ClosePopup(popupAddCards); // закрываем попап вручную
 }
 
 // Функция удаление картинок.
@@ -124,16 +137,18 @@ function deleteCard(evt) {
 
 // Попап профиля
 document.querySelector(".profile__button-edit").addEventListener("click", openProfilePopup); // Кнопка открытия попапа.
-popupProfile.querySelector(".popup__button-close").addEventListener("click", () => togglePopup(popupProfile)); // Закрытие на крестик.
+popupProfile.querySelector(".popup__button-close").addEventListener("click", () => ClosePopup(popupProfile)); // Закрытие на крестик.
 popupProfile.addEventListener("submit", handleProfileForm);
 
 // Попап Добавления мест.
 document.querySelector(".profile__button-add").addEventListener("click", openAddCards); // Кнопка открытия попапа.
-popupAddCards.querySelector(".popup__button-close").addEventListener("click", () => togglePopup(popupAddCards)); // Закрытие на крестик.
+popupAddCards.querySelector(".popup__button-close").addEventListener("click", () => ClosePopup(popupAddCards)); // Закрытие на крестик.
 popupAddCards.addEventListener("submit", handleCardForm);
 
 // Закрытие попапа с большой картинкой.
-popupImage.querySelector(".popup__button-close").addEventListener("click", () => togglePopup(popupImage)); // Закрытие на крестик.
+popupImage.querySelector(".popup__button-close").addEventListener("click", () => ClosePopup(popupImage)); // Закрытие на крестик.
 
 // Добавляем 6 карточек из масива.
-initialCards.forEach((card) => createCardElement(card.name, card.link));
+initialCards.forEach((card) => createCard(card.name, card.link));
+
+addCards();
