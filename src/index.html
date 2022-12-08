@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Место</title>
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="header">
+        <img
+          class="header__logo"
+          src="<%= require('./images/header-logo.svg') %>"
+          alt="Логотип сайта"
+        />
+      </header>
+      <!-- profile -->
+      <main class="content">
+        <section class="profile">
+          <img
+            class="profile__image"
+            src="<%= require('./images/image.jpg') %>"
+            alt="Фото профиля"
+          />
+          <div class="profile__info">
+            <h1 class="profile__user-name">Жак-Ив Кусто</h1>
+            <button
+              type="button"
+              title="Редактировать профиль"
+              class="profile__button-edit"
+            ></button>
+            <p class="profile__user-description">Исследователь океана</p>
+          </div>
+          <button
+            type="button"
+            title="Добавить место"
+            class="profile__button-add"
+          ></button>
+        </section>
+        <!-- elements -->
+        <section class="elements">
+          <ul class="elements__cards"></ul>
+        </section>
+        <template id="card">
+          <li class="elements__card">
+            <button
+              type="button"
+              title="Удалить"
+              class="elements__trash-can"
+            ></button>
+            <img
+              class="elements__image"
+              src="<%= require('./images/noimage.jpg') %>"
+              title="Фото"
+              alt="Фото"
+            />
+            <div class="elements__info">
+              <h2 class="elements__title">Тут будет название</h2>
+              <button
+                type="button"
+                title="Нравится"
+                class="elements__love-button"
+              ></button>
+            </div>
+          </li>
+        </template>
+      </main>
+      <!-- footer -->
+      <footer class="footer">
+        <p class="footer__copyright">© 2020 Mesto Russia</p>
+      </footer>
+      <!-- edit__Profile -->
+      <div id="popupProfile" class="popup">
+        <div class="popup__container">
+          <h2 class="popup__form-title">Редактировать профиль</h2>
+          <form class="form" name="profile" novalidate>
+            <label class="popup__form-input-box">
+              <input
+                type="text"
+                name="profileName"
+                id="name"
+                placeholder="Ваше имя"
+                class="form__input"
+                required
+                minlength="2"
+                maxlength="40"
+                pattern="^[a-zA-Zа-яА-ЯёË -]*$"
+                data-error-message="Разрешено использовать только английские и русские буквы, а также пробел и дефис."
+              />
+              <span class="form__input-error name-error"></span>
+            </label>
+            <label class="popup__form-input-box">
+              <input
+                type="text"
+                name="profileInfo"
+                id="about"
+                placeholder="О себе"
+                class="form__input"
+                required
+                minlength="2"
+                maxlength="200"
+                pattern="^[a-zA-Zа-яА-ЯёË -]*$"
+                data-error-message="Разрешено использовать только английские и русские буквы, а также пробел и дефис."
+              />
+              <span class="form__input-error about-error"></span>
+            </label>
+            <button
+              type="submit"
+              title="Сохранить изменения"
+              class="form__button"
+            >
+              Сохранить
+            </button>
+            <button
+              type="button"
+              title="Закрыть"
+              class="popup__button-close"
+            ></button>
+          </form>
+        </div>
+      </div>
+      <!-- add_card -->
+      <div id="popupAddCards" class="popup">
+        <div class="popup__container">
+          <h2 class="popup__form-title">Новое место</h2>
+          <form name="Addcards" class="form" novalidate>
+            <label class="popup__form-input-box">
+              <input
+                type="text"
+                name="cardName"
+                id="cardName"
+                placeholder="Название"
+                class="form__input"
+                required
+                minlength="2"
+                maxlength="30"
+                pattern="^[a-zA-Zа-яА-ЯёË -]*$"
+                data-error-message="Разрешено использовать только английские и русские буквы, а также пробел и дефис."
+              />
+              <span class="form__input-error cardName-error"></span>
+            </label>
+            <label class="popup__form-input-box">
+              <input
+                type="url"
+                name="cardLink"
+                id="link"
+                placeholder="Ссылка на картинку"
+                class="form__input"
+                required
+              />
+              <span class="form__input-error link-error"></span>
+            </label>
+            <button type="submit" title="Создать" class="form__button">
+              Сохранить
+            </button>
+            <button
+              type="button"
+              title="Закрыть"
+              class="popup__button-close"
+            ></button>
+          </form>
+        </div>
+      </div>
+      <!-- image_large -->
+      <div id="imageLarge" class="popup">
+        <div class="popup__image-container">
+          <img
+            class="popup__image"
+            src="<%= require('./images/noimage.jpg') %>"
+            title="Фото"
+            alt="Фото"
+          />
+          <button
+            type="button"
+            title="Закрыть"
+            class="popup__button-close"
+          ></button>
+          <p class="popup__image-text">Тут будет название</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

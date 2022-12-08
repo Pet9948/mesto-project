@@ -1,4 +1,4 @@
-.popup__form-input {
+.form__input {
   border: 0;
   border-bottom: 1px solid rgb(0 0 0 / 20%);
   font-size: 14px;
@@ -9,7 +9,7 @@
   width: 100%;
 }
 
-.popup__form-input:focus {
+.form__input:focus {
   outline-color: #fff6c5;
   outline-style: none;
 }
