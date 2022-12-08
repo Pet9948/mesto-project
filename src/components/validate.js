@@ -1,6 +1,11 @@
 // Валидация форм
 
-function showInputError(formElement, inputElement, errorMessage, selectorsForm) {
+function showInputError(
+  formElement,
+  inputElement,
+  errorMessage,
+  selectorsForm,
+) {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`)
   inputElement.classList.add(selectorsForm.inputErrorClass)
   errorElement.classList.add(selectorsForm.errorClass)
@@ -78,6 +83,8 @@ function setEventListeners(formElement, selectorsForm) {
 }
 
 export function enableValidation(selectorsForm) {
-  const forms = Array.from(document.querySelectorAll(selectorsForm.formSelector))
+  const forms = Array.from(
+    document.querySelectorAll(selectorsForm.formSelector),
+  )
   forms.forEach((formElement) => setEventListeners(formElement, selectorsForm))
 }
