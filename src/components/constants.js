@@ -74,4 +74,4 @@ export const cardLink = popupAddCards.querySelector('input[name="cardLink"]')
 export const popupImage = document.querySelector('#imageLarge')
 export const popupImageText = popupImage.querySelector('.popup__image-text')
 export const popupImageContainer = popupImage.querySelector('.popup__image')
-export const presskeyEsc = 'Esc'
+export const presskeyEsc = ('Escape')

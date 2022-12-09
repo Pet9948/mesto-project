@@ -1,9 +1,5 @@
 import {
-  elementsСards,
   cardTemplate,
-  popupAddCards,
-  cardName,
-  cardLink,
   popupImageText,
   popupImageContainer,
   popupImage,
@@ -38,13 +34,6 @@ export function openImageLarge(evt) {
   popupImageContainer.src = cardImage.src
   popupImageContainer.alt = cardImage.alt
   popupImageText.textContent = cardHeading.textContent
-}
-
-export function handleCardForm(evt) {
-  evt.preventDefault()
-  addCard(createCard(cardName.value, cardLink.value), elementsСards)
-  evt.target.reset()
-  modal.closePopup(popupAddCards) // закрываем попап вручную
 }
 
 // Функция удаление картинок.

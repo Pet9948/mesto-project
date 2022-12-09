@@ -1,4 +1,3 @@
-import { handleCardForm } from './card.js'
 import { presskeyEsc } from './constants.js'
 
 // Функции открытия попапов.
@@ -37,12 +36,3 @@ document.querySelectorAll('.popup').forEach((popup) =>
     }
   }),
 )
-
-// Попап Добавления мест.
-document
-  .querySelector('.profile__button-add')
-  .addEventListener('click', openAddCards) // Кнопка открытия попапа.
-popupAddCards
-  .querySelector('.popup__button-close')
-  .addEventListener('click', () => closePopup(popupAddCards)) // Закрытие на крестик.
-popupAddCards.addEventListener('submit', handleCardForm)

@@ -1,10 +1,9 @@
 import './pages/index.css'
 import * as validate from './components/validate.js'
 import { createCard } from './components/card.js'
-import { openPopup, closePopup } from './components/modal.js'
+import { openPopup, closePopup, openAddCards } from './components/modal.js'
 import {
   selectorsForm,
-  popupProfile,
   profileUserName,
   profileUserDescription,
   profileName,
@@ -12,6 +11,8 @@ import {
   profileInfo,
   initialCards,
   elementsСards,
+  cardLink,
+  cardName,
 } from './components/constants.js'
 
 // Записываем новые значения в value.
@@ -33,6 +34,13 @@ function handleProfileForm(evt) {
 
 function addCard(card, container) {
   container.prepend(card)
+}
+
+function handleCardForm(evt) {
+  evt.preventDefault()
+  addCard(createCard(cardName.value, cardLink.value), elementsСards)
+  evt.target.reset()
+  closePopup(popupAddCards) // закрываем попап вручную
 }
 
 function addCards() {
@@ -57,6 +65,15 @@ popupProfile.addEventListener('submit', handleProfileForm)
 popupImage
   .querySelector('.popup__button-close')
   .addEventListener('click', () => closePopup(popupImage)) // Закрытие на крестик.
+
+// Попап Добавления мест.
+document
+  .querySelector('.profile__button-add')
+  .addEventListener('click', openAddCards) // Кнопка открытия попапа.
+popupAddCards
+  .querySelector('.popup__button-close')
+  .addEventListener('click', () => closePopup(popupAddCards)) // Закрытие на крестик.
+popupAddCards.addEventListener('submit', handleCardForm)
 
 addCards()
 validate.enableValidation(selectorsForm)
