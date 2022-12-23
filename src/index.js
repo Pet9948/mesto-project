@@ -13,6 +13,9 @@ import {
   elementsСards,
   cardLink,
   cardName,
+  cardPopupHeadingInput,
+  cardPopupLinkInput,
+  cardPopupSubmitButton,
 } from './components/constants.js'
 
 // Записываем новые значения в value.
@@ -40,6 +43,7 @@ function handleCardForm(evt) {
   evt.preventDefault()
   addCard(createCard(cardName.value, cardLink.value), elementsСards)
   evt.target.reset()
+  validate.toggleButtonState([cardPopupHeadingInput, cardPopupLinkInput], cardPopupSubmitButton, selectorsForm);
   closePopup(popupAddCards) // закрываем попап вручную
 }
 

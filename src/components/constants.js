@@ -74,4 +74,11 @@ export const cardLink = popupAddCards.querySelector('input[name="cardLink"]')
 export const popupImage = document.querySelector('#imageLarge')
 export const popupImageText = popupImage.querySelector('.popup__image-text')
 export const popupImageContainer = popupImage.querySelector('.popup__image')
-export const presskeyEsc = ('Escape')
+export const presskeyEsc = 'Escape'
+
+
+export const cardPopup = document.querySelector('#popupAddCards')
+export const cardPopupForm = cardPopup.querySelector(selectorsForm.formSelector)
+export const cardPopupSubmitButton = cardPopupForm.querySelector(selectorsForm.submitButtonSelector)
+export const cardPopupHeadingInput = cardPopupForm.querySelector("#cardName")
+export const cardPopupLinkInput = cardPopupForm.querySelector("#link")
