@@ -78,9 +78,6 @@ function saveProfilePopup(evt) {
 
 // Вызов окна изменения профиля.
 profileEditButton.addEventListener('click', openProfilePopup)
-profileUserForm
-  .querySelector('.popup__button-close')
-  .addEventListener('click', () => closePopup(popupProfile)) // Закрытие на крестик.
 profileUserForm.addEventListener('submit', saveProfilePopup)
 
 // Сохранение изменений Аватарки и отправка на сервер.
@@ -108,9 +105,6 @@ function saveprofileImagePopup(evt) {
 // Вызов окна изменения аватарки.
 profileImageContainer.addEventListener('click', renderprofileImagePopup)
 avatarForm.addEventListener('submit', saveprofileImagePopup)
-avatarPopup
-  .querySelector('.popup__button-close')
-  .addEventListener('click', () => closePopup(avatarPopup)) // Закрытие на крестик.
 
 // Открытие попапа с добавлением карточек.
 function renderNewCardPopup() {
@@ -159,17 +153,9 @@ function renderPreviewPopup(name, link) {
   openPopup(popupImage) //Открытие попапа
 }
 
-// Закрытие попапа с большой картинкой.
-popupImage
-  .querySelector('.popup__button-close')
-  .addEventListener('click', () => closePopup(popupImage)) // Закрытие на крестик.
-
 // Вызов попапа для добавления новых карточек.
 addButton.addEventListener('click', renderNewCardPopup)
 cardPopupForm.addEventListener('submit', saveNewCardPopup)
-popupAddCards
-  .querySelector('.popup__button-close')
-  .addEventListener('click', () => closePopup(popupAddCards)) // Закрытие на крестик.
 
 // Удаление карточек.
 deleteCardPopup.addEventListener('submit', (evt) => {

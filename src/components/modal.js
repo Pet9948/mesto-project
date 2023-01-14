@@ -39,7 +39,7 @@ document.querySelectorAll('.popup').forEach((popup) =>
   popup.addEventListener('mousedown', (evt) => {
     if (
       evt.target.classList.contains('popup') ||
-      evt.target.classList.contains('popup__close-button')
+      evt.target.classList.contains('popup__button-close')
     ) {
       closePopup(popup) // закрываем попап
     }

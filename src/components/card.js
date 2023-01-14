@@ -73,8 +73,6 @@ export function createCard(
 
       deleteCardPopup
         .querySelector('.popup__button-close')
-        .addEventListener('click', () => modal.closePopup(deletePopup)) // Закрытие на крестик.
-
       modal.setDeleteCardAction(() => {
         api
           .deleteCard(card._id)
