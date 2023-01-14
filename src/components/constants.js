@@ -8,13 +8,16 @@ export const selectorsForm = {
   errorClass: 'form__input-error_visible',
 }
 
-export const popupProfile = document.querySelector('#popupProfile')
+// Информация о полях профиля
+const profile = document.querySelector('.profile');
+export const profileEditButton = profile.querySelector('.profile__button-edit')
+export const profileUserName = profile.querySelector('.profile__user-name')
+export const profileUserDescription = profile.querySelector('.profile__user-description',)
 
-// Берём информацию о полях из профиля
-export const profileUserName = document.querySelector('.profile__user-name')
-export const profileUserDescription = document.querySelector(
-  '.profile__user-description',
-)
+// Редактирование профиля.
+const popupProfile = document.querySelector('#popupProfile')
+export const profileUserForm = popupProfile.querySelector(selectorsForm.formSelector);
+export const profileUserSubmitButton = profileUserForm.querySelector(selectorsForm.submitButtonSelector);
 
 // Присваиваем значения полей новым переменным.
 export const profileName = popupProfile.querySelector(
@@ -24,44 +27,11 @@ export const profileInfo = popupProfile.querySelector(
   'input[name="profileInfo"]',
 )
 
-// Массив с карточками.
-export const initialCards = [
-  {
-    name: 'Архыз',
-    link:
-      'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg',
-  },
-  {
-    name: 'Челябинская область',
-    link:
-      'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg',
-  },
-  {
-    name: 'Иваново',
-    link:
-      'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg',
-  },
-  {
-    name: 'Камчатка',
-    link:
-      'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg',
-  },
-  {
-    name: 'Холмогорский район',
-    link:
-      'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg',
-  },
-  {
-    name: 'Байкал',
-    link:
-      'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg',
-  },
-]
-
 // Карточки
-export const elements = document.querySelector('.elements')
-export const elementsСards = elements.querySelector('.elements__cards')
 export const cardTemplate = document.querySelector('#card').content
+export const elements = document.querySelector('.elements')
+export const addButton = document.querySelector('.profile__button-add')
+export const elementsCards = document.querySelector('.elements__cards')
 
 // Добавляем свои карточки.
 export const popupAddCards = document.querySelector('#popupAddCards')
@@ -82,3 +52,14 @@ export const cardPopupForm = cardPopup.querySelector(selectorsForm.formSelector)
 export const cardPopupSubmitButton = cardPopupForm.querySelector(selectorsForm.submitButtonSelector)
 export const cardPopupHeadingInput = cardPopupForm.querySelector("#cardName")
 export const cardPopupLinkInput = cardPopupForm.querySelector("#link")
+export const deleteCardPopup = document.querySelector('.popup_type_delete-card')
+
+// аватар
+export const profileImageContainer = document.querySelector(".profile__image-container");
+export const profileImage = document.querySelector(".profile__image");
+export const avatarPopup = document.querySelector(".popup_type_avatar");
+export const avatarForm = avatarPopup.querySelector(selectorsForm.formSelector);
+export const newAvatarLinkInput = avatarForm.querySelector("#avatar-link");
+export const avatarPopupSubmitButton = avatarForm.querySelector(selectorsForm.submitButtonSelector);
+
+export const timeoutDelay = 1000;

@@ -1,6 +1,11 @@
 import { presskeyEsc } from './constants.js'
+let deleteCardAction;
 
 // Функции открытия попапов.
+
+export function setDeleteCardAction(action) {
+  deleteCardAction = action;
+}
 
 export function openPopup(popup) {
   document.addEventListener('keydown', closePopupPressEsc)
@@ -14,6 +19,10 @@ export function closePopup(popup) {
 
 export function openAddCards() {
   openPopup(popupAddCards) //Открытие попапа
+}
+
+export function deleteCardAfterConfirm() {
+  deleteCardAction();
 }
 
 // Функция закрытия попапов по ESC

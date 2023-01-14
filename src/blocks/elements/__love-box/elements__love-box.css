@@ -1,0 +1,5 @@
+.elements__love-box {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
